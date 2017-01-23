@@ -17,67 +17,67 @@ class ProfileViewController: UIViewController,UINavigationControllerDelegate, UI
     
     
     
-    @IBAction func cameraButtonTapped(sender: UIBarButtonItem) {
+    @IBAction func cameraButtonTapped(_ sender: UIBarButtonItem) {
         initImageCropping()
     }
     
     
-    @IBAction func takeAPictureTapped(sender: UIButton) {
+    @IBAction func takeAPictureTapped(_ sender: UIButton) {
         initImageCropping()
     }
     
     func initImageCropping(){
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
-        imagePicker.sourceType = .Camera
-        presentViewController((imagePicker), animated: true, completion: nil)
+        imagePicker.sourceType = .camera
+        present((imagePicker), animated: true, completion: nil)
 
     }
     
-    func promptAlet(title: String, message: String){
+    func promptAlet(_ title: String, message: String){
         let alert:UIAlertView = UIAlertView()
         alert.title = title
         alert.message = message
         alert.delegate = self
-        alert.addButtonWithTitle("Ok")
+        alert.addButton(withTitle: "Ok")
         alert.show()
     }
     
     //save the card image
-    func saveImage(image: UIImage){
-        NSUserDefaults.standardUserDefaults().setObject(UIImageJPEGRepresentation(image,1), forKey: "card")
-        NSUserDefaults.standardUserDefaults().synchronize()
+    func saveImage(_ image: UIImage){
+        UserDefaults.standard.set(UIImageJPEGRepresentation(image,1), forKey: "card")
+        UserDefaults.standard.synchronize()
     }
     
     //allows the user to crop the image
-    func ImageCropViewControllerSuccess(controller: UIViewController!, didFinishCroppingImage croppedImage: UIImage!) {
+    func imageCropViewControllerSuccess(_ controller: UIViewController!, didFinishCroppingImage croppedImage: UIImage!) {
         saveImage(croppedImage)
         promptAlet("Success!", message: "Your card picture was saved.")
         checkAndLoadCardPicture()
-        navigationController?.popViewControllerAnimated(true)
+        navigationController?.popViewController(animated: true)
     }
     
     
-    func ImageCropViewControllerDidCancel(controller: UIViewController!) {
-        navigationController?.popViewControllerAnimated(true)
+    func imageCropViewControllerDidCancel(_ controller: UIViewController!) {
+        navigationController?.popViewController(animated: true)
     }
     
     //saves the photo taken by the user
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        imagePicker.dismissViewControllerAnimated(true, completion: nil)
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        imagePicker.dismiss(animated: true, completion: nil)
         let image = (info[UIImagePickerControllerOriginalImage] as? UIImage)!
         saveImage(image)
         checkAndLoadCardPicture()
         let controller = ImageCropViewController(image: image)
-        controller.delegate = self
-        navigationController?.pushViewController(controller, animated: true)
+        controller?.delegate = self
+        navigationController?.pushViewController(controller!, animated: true)
     }
     
     //load the card image in case it exists
     func checkAndLoadCardPicture(){
-        imageView.contentMode = UIViewContentMode.ScaleAspectFit
-        if let imageToLoad = NSUserDefaults.standardUserDefaults().objectForKey("card"){
-            imageView.image = UIImage(data: imageToLoad as! NSData)
+        imageView.contentMode = UIViewContentMode.scaleAspectFit
+        if let imageToLoad = UserDefaults.standard.object(forKey: "card"){
+            imageView.image = UIImage(data: imageToLoad as! Data)
         } else {
             imageView.image = UIImage(named: "squirrelCard")
             if !auth.userHaveEverBeenAtProfilePage(){
@@ -86,16 +86,16 @@ class ProfileViewController: UIViewController,UINavigationControllerDelegate, UI
             }
         }
     }
-    func bttnTouched(sender: UIBarButtonItem){
-        self.performSegueWithIdentifier("profileBackToMenu", sender: nil)
+    func bttnTouched(_ sender: UIBarButtonItem){
+        self.performSegue(withIdentifier: "profileBackToMenu", sender: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let titleImage = UIImage(named: "Wordmark-Blue-Red-1")
-        let go: UIButton = UIButton(frame: CGRectMake(0,0,150, 25))
-        go.setImage(titleImage, forState: .Normal)
-        go.addTarget(self, action: #selector(WebViewContoller.bttnTouched(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        let go: UIButton = UIButton(frame: CGRect(x: 0,y: 0,width: 150, height: 25))
+        go.setImage(titleImage, for: UIControlState())
+        go.addTarget(self, action: #selector(WebViewContoller.bttnTouched(_:)), for: UIControlEvents.touchUpInside)
         
         self.navigationItem.titleView = go
         //my code :)
@@ -104,7 +104,7 @@ class ProfileViewController: UIViewController,UINavigationControllerDelegate, UI
         
         imageView.layer.cornerRadius = 5
         imageView.clipsToBounds = true
-        imageView.layer.borderColor = UIColor.blackColor().CGColor
+        imageView.layer.borderColor = UIColor.black.cgColor
         imageView.layer.borderWidth = 2.0
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "backgroundCollor")!)
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())

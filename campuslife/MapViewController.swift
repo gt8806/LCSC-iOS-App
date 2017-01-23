@@ -17,28 +17,28 @@ class MapViewController: UIViewController {
     
     let pinchRec = UIPinchGestureRecognizer()
     let panRec = UIPanGestureRecognizer()
-    func pinchedView(sender:UIPinchGestureRecognizer){
-        self.view.bringSubviewToFront(pinchView)
-        sender.view!.transform = CGAffineTransformScale(sender.view!.transform, sender.scale, sender.scale)
+    func pinchedView(_ sender:UIPinchGestureRecognizer){
+        self.view.bringSubview(toFront: pinchView)
+        sender.view!.transform = sender.view!.transform.scaledBy(x: sender.scale, y: sender.scale)
         sender.scale = 1.0
     }
     
-    func draggedView(sender:UIPanGestureRecognizer){
-        self.view!.bringSubviewToFront(sender.view!)
-        let translation = sender.translationInView(self.view)
-        sender.view!.center = CGPointMake(sender.view!.center.x + translation.x, sender.view!.center.y + translation.y)
-        sender.setTranslation(CGPointZero, inView: self.view)
+    func draggedView(_ sender:UIPanGestureRecognizer){
+        self.view!.bringSubview(toFront: sender.view!)
+        let translation = sender.translation(in: self.view)
+        sender.view!.center = CGPoint(x: sender.view!.center.x + translation.x, y: sender.view!.center.y + translation.y)
+        sender.setTranslation(CGPoint.zero, in: self.view)
     }
-    func bttnTouched(sender: UIBarButtonItem){
-        self.performSegueWithIdentifier("mapBackToMenu", sender: nil)
+    func bttnTouched(_ sender: UIBarButtonItem){
+        self.performSegue(withIdentifier: "mapBackToMenu", sender: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let titleImage = UIImage(named: "Wordmark-Blue-Red-1")
-        let go: UIButton = UIButton(frame: CGRectMake(0,0,150, 25))
-        go.setImage(titleImage, forState: .Normal)
-        go.addTarget(self, action: #selector(WebViewContoller.bttnTouched(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        let go: UIButton = UIButton(frame: CGRect(x: 0,y: 0,width: 150, height: 25))
+        go.setImage(titleImage, for: UIControlState())
+        go.addTarget(self, action: #selector(WebViewContoller.bttnTouched(_:)), for: UIControlEvents.touchUpInside)
         
         self.navigationItem.titleView = go
         //my code :)
@@ -48,13 +48,13 @@ class MapViewController: UIViewController {
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
-        panRec.addTarget(self, action: "draggedView:")
+        panRec.addTarget(self, action: #selector(MapViewController.draggedView(_:)))
         panView.addGestureRecognizer(panRec)
-        panView.userInteractionEnabled = true
+        panView.isUserInteractionEnabled = true
         pinchRec.addTarget(self, action: #selector(MapViewController.pinchedView(_:)))
         pinchView.addGestureRecognizer(pinchRec)
-        pinchView.userInteractionEnabled = true
-        pinchView.multipleTouchEnabled = true
+        pinchView.isUserInteractionEnabled = true
+        pinchView.isMultipleTouchEnabled = true
         //imageView.image = UIImage(contentsOfFile: "CampusMap")
     }
 }

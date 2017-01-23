@@ -17,27 +17,27 @@ class WebViewContoller: UIViewController, UIWebViewDelegate {
     @IBOutlet weak var webViewWindow: UIWebView!
 
     //Load the main Apps's main page when this button is touched
-    func bttnTouched(sender: UIBarButtonItem){
-        self.performSegueWithIdentifier("backToMenu", sender: nil)
+    func bttnTouched(_ sender: UIBarButtonItem){
+        self.performSegue(withIdentifier: "backToMenu", sender: nil)
     }
     
     
     //opens an App's with an deeplink as paramenter
-    func openAppDeepLink(deepLinkString: String){
-        let appURL = NSURL(string: deepLinkString)
-        if UIApplication.sharedApplication().canOpenURL(appURL!){
-            UIApplication.sharedApplication().openURL(appURL!)
+    func openAppDeepLink(_ deepLinkString: String){
+        let appURL = URL(string: deepLinkString)
+        if UIApplication.shared.canOpenURL(appURL!){
+            UIApplication.shared.openURL(appURL!)
         } else {
-            UIApplication.sharedApplication().openURL(NSURL(string: "https://itunes.apple.com/us/app/gmail-email-from-google/id422689480?mt=8")!)
+            UIApplication.shared.openURL(URL(string: "https://itunes.apple.com/us/app/gmail-email-from-google/id422689480?mt=8")!)
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let titleImage = UIImage(named: "Wordmark-Blue-Red-1")
-        let go: UIButton = UIButton(frame: CGRectMake(0,0,150, 25))
-        go.setImage(titleImage, forState: .Normal)
-        go.addTarget(self, action: #selector(WebViewContoller.bttnTouched(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        let go: UIButton = UIButton(frame: CGRect(x: 0,y: 0,width: 150, height: 25))
+        go.setImage(titleImage, for: UIControlState())
+        go.addTarget(self, action: #selector(WebViewContoller.bttnTouched(_:)), for: UIControlEvents.touchUpInside)
         
         self.navigationItem.titleView = go
         //menu button, tap and pan gestures functionalities
@@ -76,21 +76,21 @@ class WebViewContoller: UIViewController, UIWebViewDelegate {
         
         //opens URL in webview
         webViewWindow?.delegate = self
-        let url = NSURL(string: urlText)
-        let request = NSURLRequest(URL: url!)
+        let url = URL(string: urlText)
+        let request = URLRequest(url: url!)
         webViewWindow?.loadRequest(request)
         //returns the app to the home view in case the operation called is "Hangouts" or "LCMail"
        if title == "Hangouts" || title == "LCMail"{
-            performSegueWithIdentifier("backToMenu", sender: self)
+            performSegue(withIdentifier: "backToMenu", sender: self)
         }
     }
     
     
     
-    func webViewDidFinishLoad(webView: UIWebView) {
+    func webViewDidFinishLoad(_ webView: UIWebView) {
         //runs an script according to the url
         let script = ScriptWebView()
-        let currentURL = (webView.request?.URL!.absoluteString)!
-       webView.stringByEvaluatingJavaScriptFromString(script.getScript(currentURL))
+        let currentURL = (webView.request?.url!.absoluteString)!
+       webView.stringByEvaluatingJavaScript(from: script.getScript(currentURL))
     }
 }

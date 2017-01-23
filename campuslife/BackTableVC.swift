@@ -22,8 +22,8 @@ class BackTableVC: UITableViewController {
         self.tableView.tableFooterView = UIView()
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let destination = segue.destinationViewController as? UINavigationController{
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? UINavigationController{
             let title = segue.identifier
             destination.title = title
         }

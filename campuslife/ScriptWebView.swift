@@ -10,15 +10,15 @@ import UIKit
 
 class ScriptWebView: Authentication{
     
-    private let warriorURL: String = "https://warriorwebss.lcsc.edu/Student/Account/Login?ReturnUrl=%2fStudent%2fPlanning%2fDegreePlans"
-    private let blackboardURL: String = "https://lcsc.blackboard.com/"
+    fileprivate let warriorURL: String = "https://warriorwebss.lcsc.edu/Student/Account/Login?ReturnUrl=%2fStudent%2fPlanning%2fDegreePlans"
+    fileprivate let blackboardURL: String = "https://lcsc.blackboard.com/"
     
     override init() {
         super.init()
     }
 
     
-    func getScript(url: String) -> String {
+    func getScript(_ url: String) -> String {
         if url == warriorURL{
             let savedUsername = super.getWarriorWebUsername()
             let savedPassword = super.getWarriorWebPassword()

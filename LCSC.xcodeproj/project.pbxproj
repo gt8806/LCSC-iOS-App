@@ -570,6 +570,7 @@
 				TargetAttributes = {
 					C1E66DED183C333A00851B89 = {
 						DevelopmentTeam = 5322BWHJ7K;
+						LastSwiftMigration = 0820;
 					};
 				};
 			};
@@ -851,6 +852,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "LCSC-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -877,6 +879,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "LCSC-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
