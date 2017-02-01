@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dLU-F8-34X">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dLU-F8-34X">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -1745,7 +1745,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="phone-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ego-c9-jkY">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wallet-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ego-c9-jkY">
                                                     <rect key="frame" x="8" y="14" width="16" height="16"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -2051,7 +2051,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="miY-ar-dtF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5109.375" y="-837.67605633802816"/>
+            <point key="canvasLocation" x="-5170" y="-839"/>
         </scene>
         <!--Category Table View-->
         <scene sceneID="Nvs-v4-GOG">
@@ -2512,6 +2512,7 @@ AAAAABocA
         <image name="profileIcon" width="256" height="256"/>
         <image name="radio-icon.png" width="16" height="16"/>
         <image name="twitter_icon.png_32x32.png" width="32" height="32"/>
+        <image name="wallet-icon.png" width="32" height="32"/>
         <image name="warrior-one-card-icon.png" width="16" height="16"/>
         <image name="warrior-web-icon.png" width="16" height="16"/>
     </resources>
