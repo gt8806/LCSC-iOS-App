@@ -55,6 +55,7 @@
 		44A8E2BF1CA1E11600C4435D /* BlackBoardProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A8E2BE1CA1E11600C4435D /* BlackBoardProfileViewController.m */; };
 		44DF21581C99DD36003A0C3A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DF21571C99DD36003A0C3A /* MapViewController.swift */; };
 		44EAFBD31CA31AD800BE6200 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EAFBD21CA31AD800BE6200 /* ProfileViewController.swift */; };
+		4C5DF4A31E4264690076EF45 /* wallet-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C5DF4A21E4264690076EF45 /* wallet-icon.png */; };
 		991048FB1A1E656100C83570 /* ContactInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 991048FA1A1E656100C83570 /* ContactInfo.m */; };
 		9916368319F829BB007F7E47 /* AllEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9916368119F829BB007F7E47 /* AllEventViewController.m */; };
 		992592AE19FDC46B008946F8 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9925929D19FDC46B008946F8 /* Icon-60@2x.png */; };
@@ -190,6 +191,7 @@
 		44A8E2BE1CA1E11600C4435D /* BlackBoardProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlackBoardProfileViewController.m; sourceTree = "<group>"; };
 		44DF21571C99DD36003A0C3A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		44EAFBD21CA31AD800BE6200 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4C5DF4A21E4264690076EF45 /* wallet-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wallet-icon.png"; path = "../../../../../Downloads/wallet-icon.png"; sourceTree = "<group>"; };
 		991048F91A1E656100C83570 /* ContactInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactInfo.h; sourceTree = "<group>"; };
 		991048FA1A1E656100C83570 /* ContactInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactInfo.m; sourceTree = "<group>"; };
 		9916368119F829BB007F7E47 /* AllEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllEventViewController.m; sourceTree = "<group>"; };
@@ -297,6 +299,7 @@
 		402F77751CC80145001E8153 /* menu-icons */ = {
 			isa = PBXGroup;
 			children = (
+				4C5DF4A21E4264690076EF45 /* wallet-icon.png */,
 				449269A11CD7CF7F00DDEADA /* add-to-calendar-icon.png */,
 				449269A31CD7CFB200DDEADA /* lcmail-icon.png */,
 				449269A41CD7CFB200DDEADA /* lc-website-icon.png */,
@@ -625,6 +628,7 @@
 				997451A21A38D81500EA9B7C /* phone2-32.png in Resources */,
 				992592BD19FDC46B008946F8 /* Icon@2x.png in Resources */,
 				9995B92B1A2BF488004C08C9 /* university-32.png in Resources */,
+				4C5DF4A31E4264690076EF45 /* wallet-icon.png in Resources */,
 				402F77811CC80145001E8153 /* phone-icon.png in Resources */,
 				402F77851CC804C3001E8153 /* camera-icon.png in Resources */,
 				449269A21CD7CF7F00DDEADA /* add-to-calendar-icon.png in Resources */,
