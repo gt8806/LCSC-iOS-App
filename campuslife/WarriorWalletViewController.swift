@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WarriorWebViewController: UIViewController {
+class WarriorWalletViewController: UIViewController {
 	//This gets the data from the database using the warriorWallet API
 	func get_data(key: String)-> (String, Int){
 		let session = URLSession.shared
