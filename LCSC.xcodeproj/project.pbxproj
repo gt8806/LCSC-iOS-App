@@ -102,6 +102,7 @@
 		99DE4C2119E5B58D00EBA303 /* EventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DE4C2019E5B58D00EBA303 /* EventDetailViewController.m */; };
 		99F6C3DB1A441A920041328A /* date_to-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 99F6C3DA1A441A920041328A /* date_to-32.png */; };
 		99F6F39219FDC39500536DB8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99F6F39119FDC39500536DB8 /* Images.xcassets */; };
+		BED098D81E4BA0C30093E91B /* WarriorWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED098D71E4BA0C30093E91B /* WarriorWallet.swift */; };
 		C105A2A018B6A992007C841C /* bigAlphaCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = C105A29F18B6A992007C841C /* bigAlphaCircle.png */; };
 		C10BC49A18AD8C5D004C91CD /* newAlphaCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = C10BC49918AD8C5D004C91CD /* newAlphaCircle.png */; };
 		C11195211A113F35001ED805 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11195201A113F35001ED805 /* SystemConfiguration.framework */; };
@@ -243,6 +244,7 @@
 		99DE4C2019E5B58D00EBA303 /* EventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailViewController.m; sourceTree = "<group>"; };
 		99F6C3DA1A441A920041328A /* date_to-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "date_to-32.png"; sourceTree = "<group>"; };
 		99F6F39119FDC39500536DB8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BED098D71E4BA0C30093E91B /* WarriorWallet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarriorWallet.swift; sourceTree = "<group>"; };
 		C105A29F18B6A992007C841C /* bigAlphaCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bigAlphaCircle.png; sourceTree = "<group>"; };
 		C108EA171A0802B2006A7BC7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C10BC49918AD8C5D004C91CD /* newAlphaCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newAlphaCircle.png; sourceTree = "<group>"; };
@@ -498,6 +500,7 @@
 				C11195241A114473001ED805 /* Reachability.m */,
 				07484B1B1C84CF84007D1ADC /* Authentication.swift */,
 				CC010EFA1E428F23005AA4F7 /* WarriorWalletViewController.swift */,
+				BED098D71E4BA0C30093E91B /* WarriorWallet.swift */,
 				99F6F39119FDC39500536DB8 /* Images.xcassets */,
 				C1E66DF8183C333A00851B89 /* Supporting Files */,
 			);
@@ -729,6 +732,7 @@
 				170C727D1CC6C2FD00EC4F0C /* JsonParser.m in Sources */,
 				403DDE7C1CB9EA70009F2950 /* ExpandableEventCell.m in Sources */,
 				C11195251A114473001ED805 /* Reachability.m in Sources */,
+				BED098D81E4BA0C30093E91B /* WarriorWallet.swift in Sources */,
 				07CC95661C877BC900C05BB0 /* ScriptWebView.swift in Sources */,
 				9916368319F829BB007F7E47 /* AllEventViewController.m in Sources */,
 				409B8EF61C911B9200F4361D /* MenuViewController.m in Sources */,
