@@ -12,20 +12,31 @@ class WarriorWallet: UITabBarController {
 
 	@IBOutlet weak var menuButton: UIBarButtonItem!
 	
+	func bttnTouched(_ sender: UIBarButtonItem){
+		self.performSegue(withIdentifier: "pointsBackToMenu", sender: nil)
+	}
+	
+	
     override func viewDidLoad() {
         super.viewDidLoad()
+		
+		if self.revealViewController() != nil {
+			menuButton.target = self.revealViewController()
+			menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
+			self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+			self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
+		}
+
 
         // Do any additional setup after loading the view.
     }
+	
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+		//menuButton.target = revealViewController()
+		//menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
         // Dispose of any resources that can be recreated.
-		if self.revealViewController() != nil {
-			menuButton.target = self.revealViewController()
-			menuButton.action = "revealToggle:"
-			self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-		}
     }
     
 
