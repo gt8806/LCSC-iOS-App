@@ -122,7 +122,6 @@
 		C1E66E47183C33D000851B89 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E66E3E183C33D000851B89 /* CalendarViewController.m */; };
 		C1E66E48183C33D000851B89 /* Day_Event_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E66E40183C33D000851B89 /* Day_Event_ViewController.m */; };
 		C1E66E4B183C33D000851B89 /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E66E46183C33D000851B89 /* Preferences.m */; };
-		CC010EFB1E428F23005AA4F7 /* WarriorWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC010EFA1E428F23005AA4F7 /* WarriorWalletViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -277,7 +276,6 @@
 		C1E66E40183C33D000851B89 /* Day_Event_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Day_Event_ViewController.m; sourceTree = "<group>"; };
 		C1E66E45183C33D000851B89 /* Preferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Preferences.h; sourceTree = "<group>"; };
 		C1E66E46183C33D000851B89 /* Preferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Preferences.m; sourceTree = "<group>"; };
-		CC010EFA1E428F23005AA4F7 /* WarriorWalletViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarriorWalletViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -499,7 +497,6 @@
 				C111951F1A113EFA001ED805 /* Reachability.h */,
 				C11195241A114473001ED805 /* Reachability.m */,
 				07484B1B1C84CF84007D1ADC /* Authentication.swift */,
-				CC010EFA1E428F23005AA4F7 /* WarriorWalletViewController.swift */,
 				BED098D71E4BA0C30093E91B /* WarriorWallet.swift */,
 				99F6F39119FDC39500536DB8 /* Images.xcassets */,
 				C1E66DF8183C333A00851B89 /* Supporting Files */,
@@ -725,7 +722,6 @@
 				C1E66E48183C33D000851B89 /* Day_Event_ViewController.m in Sources */,
 				07484B1C1C84CF84007D1ADC /* Authentication.swift in Sources */,
 				170C727A1CC4B47500EC4F0C /* DataCache.m in Sources */,
-				CC010EFB1E428F23005AA4F7 /* WarriorWalletViewController.swift in Sources */,
 				C1E66DFE183C333A00851B89 /* main.m in Sources */,
 				40AC32EC1C60294B003468F8 /* MonthOfEvents.m in Sources */,
 				9995B91F1A2BDE4A004C08C9 /* AthleticsWebViewController.m in Sources */,
