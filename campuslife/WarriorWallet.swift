@@ -12,13 +12,38 @@ class WarriorWallet: UITabBarController {
 
 	@IBOutlet weak var menuButton: UIBarButtonItem!
 	
+	let defaults = UserDefaults.standard
+
+	
 	func bttnTouched(_ sender: UIBarButtonItem){
 		self.performSegue(withIdentifier: "pointsBackToMenu", sender: nil)
 	}
 	
+	func login_worked(usrname: String, password: String) -> Bool{
+		print("place holder")
+		return true
+	}
 	
     override func viewDidLoad() {
         super.viewDidLoad()
+
+		var userName = ""
+		var passWord = ""
+		
+		if (defaults.string(forKey: "wwlogin") != nil) && (defaults.string(forKey: "wwpassword") != nil){
+			userName = defaults.string(forKey: "wwlogin")!
+			passWord = defaults.string(forKey: "wwpassword")!
+			//this is the case in which a user name and password exist, but they are not correct.
+			if login_worked(usrname: userName, password: passWord) == false {
+				print("place holder")
+			}
+			print("Username: "+userName)
+			print("password: "+passWord)
+		}
+		else{
+			print("placeholder")
+		}
+		
 		
 		if self.revealViewController() != nil {
 			menuButton.target = self.revealViewController()
@@ -32,9 +57,8 @@ class WarriorWallet: UITabBarController {
     }
 	
 	//This gets the data from the database using the warriorWallet API
-	func get_data(key: String)-> (String, Int){
+	func get_points(key: String)-> (Int){
 		let session = URLSession.shared
-		var email = ""
 		var points = 0
 		points = 0
 		let warriorWalletRequestURL = URL(string: "")!// call to api
@@ -47,7 +71,6 @@ class WarriorWallet: UITabBarController {
 			else {
 				do {
 					let mydata = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as! [String: AnyObject]
-					email = mydata["main"]!["email"]!! as! String
 					points = mydata["main"]!["points"]!! as! Int
 					
 				}
@@ -57,7 +80,7 @@ class WarriorWallet: UITabBarController {
 			}
 		})
 		dataTask.resume()
-		return(email,points)
+		return(points)
 	}
 	
 	
