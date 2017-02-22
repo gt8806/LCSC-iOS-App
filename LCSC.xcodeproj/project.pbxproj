@@ -103,6 +103,7 @@
 		99F6C3DB1A441A920041328A /* date_to-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 99F6C3DA1A441A920041328A /* date_to-32.png */; };
 		99F6F39219FDC39500536DB8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99F6F39119FDC39500536DB8 /* Images.xcassets */; };
 		BED098D81E4BA0C30093E91B /* WarriorWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED098D71E4BA0C30093E91B /* WarriorWallet.swift */; };
+		BEEF58601E57800000EAE76F /* ProfileTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF585F1E57800000EAE76F /* ProfileTabBar.swift */; };
 		C105A2A018B6A992007C841C /* bigAlphaCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = C105A29F18B6A992007C841C /* bigAlphaCircle.png */; };
 		C10BC49A18AD8C5D004C91CD /* newAlphaCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = C10BC49918AD8C5D004C91CD /* newAlphaCircle.png */; };
 		C11195211A113F35001ED805 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11195201A113F35001ED805 /* SystemConfiguration.framework */; };
@@ -244,6 +245,7 @@
 		99F6C3DA1A441A920041328A /* date_to-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "date_to-32.png"; sourceTree = "<group>"; };
 		99F6F39119FDC39500536DB8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BED098D71E4BA0C30093E91B /* WarriorWallet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarriorWallet.swift; sourceTree = "<group>"; };
+		BEEF585F1E57800000EAE76F /* ProfileTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTabBar.swift; sourceTree = "<group>"; };
 		C105A29F18B6A992007C841C /* bigAlphaCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bigAlphaCircle.png; sourceTree = "<group>"; };
 		C108EA171A0802B2006A7BC7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C10BC49918AD8C5D004C91CD /* newAlphaCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newAlphaCircle.png; sourceTree = "<group>"; };
@@ -457,6 +459,7 @@
 				403DDE801CBC1CDA009F2950 /* twitter_icon.png_32x32.png */,
 				403DDE731CB9DF72009F2950 /* down_arrow 2.png_16x16.png */,
 				44EAFBD21CA31AD800BE6200 /* ProfileViewController.swift */,
+				BEEF585F1E57800000EAE76F /* ProfileTabBar.swift */,
 				44A8E2BD1CA1E11600C4435D /* BlackBoardProfileViewController.h */,
 				44A8E2BE1CA1E11600C4435D /* BlackBoardProfileViewController.m */,
 				44DF21571C99DD36003A0C3A /* MapViewController.swift */,
@@ -728,6 +731,7 @@
 				170C727D1CC6C2FD00EC4F0C /* JsonParser.m in Sources */,
 				403DDE7C1CB9EA70009F2950 /* ExpandableEventCell.m in Sources */,
 				C11195251A114473001ED805 /* Reachability.m in Sources */,
+				BEEF58601E57800000EAE76F /* ProfileTabBar.swift in Sources */,
 				BED098D81E4BA0C30093E91B /* WarriorWallet.swift in Sources */,
 				07CC95661C877BC900C05BB0 /* ScriptWebView.swift in Sources */,
 				9916368319F829BB007F7E47 /* AllEventViewController.m in Sources */,

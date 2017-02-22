@@ -23,7 +23,7 @@
     [self changeDisplaytext:@"" andPassword:@""];
 }
 
-//fill the text fiel with the user information after loading the view
+//fill the text file with the user information after loading the view
 - (void)viewDidLoad {
     [super viewDidLoad];
     UIImage* titleImage = [UIImage imageNamed:@"Wordmark-Blue-Red-1"];
@@ -68,7 +68,8 @@
         [_alert addButtonWithTitle:@"Ok"];
         [_alert show];
     }
-    
+		[_usernameDisplay endEditing:YES];
+		[_passwordDisplay endEditing:YES];
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{

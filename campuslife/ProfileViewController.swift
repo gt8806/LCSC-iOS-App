@@ -9,19 +9,13 @@
 import UIKit
 
 class ProfileViewController: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate, ImageCropViewControllerDelegate {
-    @IBOutlet weak var menuButton: UIBarButtonItem!
     
     @IBOutlet weak var imageView: UIImageView!
     var imagePicker: UIImagePickerController!
     let auth = Authentication()
     
     
-    
-    @IBAction func cameraButtonTapped(_ sender: UIBarButtonItem) {
-        initImageCropping()
-    }
-    
-    
+
     @IBAction func takeAPictureTapped(_ sender: UIButton) {
         initImageCropping()
     }
@@ -86,9 +80,7 @@ class ProfileViewController: UIViewController,UINavigationControllerDelegate, UI
             }
         }
     }
-    func bttnTouched(_ sender: UIBarButtonItem){
-        self.performSegue(withIdentifier: "profileBackToMenu", sender: nil)
-    }
+	
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,9 +90,7 @@ class ProfileViewController: UIViewController,UINavigationControllerDelegate, UI
         go.addTarget(self, action: #selector(WebViewContoller.bttnTouched(_:)), for: UIControlEvents.touchUpInside)
         
         self.navigationItem.titleView = go
-        //my code :)
-        menuButton.target = revealViewController()
-        menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
+		
         
         imageView.layer.cornerRadius = 5
         imageView.clipsToBounds = true
