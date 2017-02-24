@@ -14,8 +14,7 @@ class ProfileViewController: UIViewController,UINavigationControllerDelegate, UI
     var imagePicker: UIImagePickerController!
     let auth = Authentication()
     
-    
-
+	
     @IBAction func takeAPictureTapped(_ sender: UIButton) {
         initImageCropping()
     }
@@ -81,7 +80,11 @@ class ProfileViewController: UIViewController,UINavigationControllerDelegate, UI
         }
     }
 	
-    
+	
+
+	@IBOutlet weak var webView: UIWebView!
+	var urlValue = "http://connect.lcsc.edu/ecc/warrioronecard.aspx"
+	
     override func viewDidLoad() {
         super.viewDidLoad()
         let titleImage = UIImage(named: "Wordmark-Blue-Red-1")
@@ -101,5 +104,11 @@ class ProfileViewController: UIViewController,UINavigationControllerDelegate, UI
         
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
         checkAndLoadCardPicture()
+		
+		
+		if let url = URL (string: urlValue){
+			let requestObj = URLRequest(url: url)
+			_ = webView.loadRequest(requestObj)
+		}
     }
 }
