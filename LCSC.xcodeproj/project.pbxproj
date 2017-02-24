@@ -122,6 +122,8 @@
 		C1E66E47183C33D000851B89 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E66E3E183C33D000851B89 /* CalendarViewController.m */; };
 		C1E66E48183C33D000851B89 /* Day_Event_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E66E40183C33D000851B89 /* Day_Event_ViewController.m */; };
 		C1E66E4B183C33D000851B89 /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E66E46183C33D000851B89 /* Preferences.m */; };
+		CC3433841E5E1AF30016ADDD /* keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3433831E5E1AF30016ADDD /* keychain.swift */; };
+		CC4704A01E5788B200F1A84D /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = CC47049F1E5788B200F1A84D /* KeychainWrapper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -276,6 +278,9 @@
 		C1E66E40183C33D000851B89 /* Day_Event_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Day_Event_ViewController.m; sourceTree = "<group>"; };
 		C1E66E45183C33D000851B89 /* Preferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Preferences.h; sourceTree = "<group>"; };
 		C1E66E46183C33D000851B89 /* Preferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Preferences.m; sourceTree = "<group>"; };
+		CC3433831E5E1AF30016ADDD /* keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = keychain.swift; sourceTree = "<group>"; };
+		CC47049E1E5788B200F1A84D /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
+		CC47049F1E5788B200F1A84D /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -438,6 +443,9 @@
 				401001C91CB0D88E0059E341 /* AllEventCell.m */,
 				C1E66E00183C333A00851B89 /* AppDelegate.h */,
 				C1E66E01183C333A00851B89 /* AppDelegate.m */,
+				CC47049E1E5788B200F1A84D /* KeychainWrapper.h */,
+				CC47049F1E5788B200F1A84D /* KeychainWrapper.m */,
+				CC3433831E5E1AF30016ADDD /* keychain.swift */,
 				403DDE7A1CB9EA70009F2950 /* ExpandableEventCell.h */,
 				403DDE7B1CB9EA70009F2950 /* ExpandableEventCell.m */,
 				401001C21CB0B3C30059E341 /* CategoryTableView.h */,
@@ -703,6 +711,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				443C4ECB1C97718200B6FC58 /* ImageCropView.m in Sources */,
+				CC4704A01E5788B200F1A84D /* KeychainWrapper.m in Sources */,
 				99DE4C2119E5B58D00EBA303 /* EventDetailViewController.m in Sources */,
 				4071E64E1C925144002E0D8E /* twitterViewController.m in Sources */,
 				C1E66E02183C333A00851B89 /* AppDelegate.m in Sources */,
@@ -730,6 +739,7 @@
 				C11195251A114473001ED805 /* Reachability.m in Sources */,
 				BED098D81E4BA0C30093E91B /* WarriorWallet.swift in Sources */,
 				07CC95661C877BC900C05BB0 /* ScriptWebView.swift in Sources */,
+				CC3433841E5E1AF30016ADDD /* keychain.swift in Sources */,
 				9916368319F829BB007F7E47 /* AllEventViewController.m in Sources */,
 				409B8EF61C911B9200F4361D /* MenuViewController.m in Sources */,
 				400AC8721C6E69BA003FC6E3 /* LCSCEvent.m in Sources */,

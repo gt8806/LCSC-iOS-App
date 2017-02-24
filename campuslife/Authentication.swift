@@ -13,10 +13,12 @@ import UIKit
 @objc class Authentication: NSObject {
     
     fileprivate var prefs = UserDefaults.standard
-    override init(){
+	fileprivate let keychain = KeychainSwift()
+
+	override init(){
         super.init()
         //initializing data in case it is nil
-        if (((prefs.string(forKey: "wwlogin") == nil || prefs.string(forKey: "wwpassword") == nil || prefs.string(forKey: "bblogin") == nil || prefs.string(forKey: "bbpassword") == nil)) || (prefs.string(forKey: "lcmlogin") == nil) || (prefs.string(forKey: "lcmpassword")) == nil){
+        if (((prefs.string(forKey: "wwlogin") == nil || keychain.get("wwpassword") == nil || prefs.string(forKey: "bblogin") == nil || keychain.get("bbpassword") == nil)) || (prefs.string(forKey: "lcmlogin") == nil) || (keychain.get("lcmpassword")) == nil){
             clearProfile()
         }
         if (prefs.string(forKey: "userHaveEverBeenAtResourcesPage") == nil){
@@ -36,19 +38,19 @@ import UIKit
     
     func clearWarriorWebProfile(){
         prefs.set("", forKey: "wwlogin")
-        prefs.set("", forKey: "wwpassword")
+		keychain.set("", forKey: "wwpassword")
         prefs.synchronize()
     }
     
     func clearBlackBoardProfile(){
         prefs.set("", forKey: "bblogin")
-        prefs.set("", forKey: "bbpassword")
+		keychain.set("", forKey: "bbpassword")
         prefs.synchronize()
     }
     
     func clearLCMailProfile(){
         prefs.set("", forKey: "lcmlogin")
-        prefs.set("", forKey: "lcmpassword")
+		keychain.set("", forKey: "lcmpassword")
         prefs.synchronize()
     }
     
@@ -80,7 +82,7 @@ import UIKit
             if (newLogin != ""){
                 if (newPassword != ""){
                     prefs.set(newLogin!, forKey: "wwlogin")
-                    prefs.set(newPassword!, forKey: "wwpassword")
+					keychain.set(newPassword!, forKey: "wwpassword")
                     prefs.synchronize()
                     return true
                 }
@@ -89,7 +91,7 @@ import UIKit
             if (newLogin != ""){
                 if (newPassword != ""){
                     prefs.set(newLogin!, forKey: "bblogin")
-                    prefs.set(newPassword!, forKey: "bbpassword")
+					keychain.set(newPassword!, forKey: "bbpassword")
                     prefs.synchronize()
                     return true
                 }
@@ -105,7 +107,7 @@ import UIKit
     }
     
     func getWarriorWebPassword() -> String{
-        return prefs.string(forKey: "wwpassword")!
+        return keychain.get("wwpassword")!
     }
     
     func getBlackBoardUsername() -> String{
@@ -113,7 +115,7 @@ import UIKit
     }
     
     func getBlackBoardPassword() -> String{
-        return prefs.string(forKey: "bbpassword")!
+        return keychain.get("bbpassword")!
     }
     
 }
