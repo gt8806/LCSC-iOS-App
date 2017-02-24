@@ -10,6 +10,5 @@
 #define LCSC_Bridging_Header_h
 #import "SWRevealViewController.h"
 #import "ImageCropView.h"
-#import "KeychainWrapper.h"
 
 #endif /* LCSC_Bridging_Header_h */
