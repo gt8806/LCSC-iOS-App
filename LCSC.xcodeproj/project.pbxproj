@@ -102,7 +102,10 @@
 		99DE4C2119E5B58D00EBA303 /* EventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DE4C2019E5B58D00EBA303 /* EventDetailViewController.m */; };
 		99F6C3DB1A441A920041328A /* date_to-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 99F6C3DA1A441A920041328A /* date_to-32.png */; };
 		99F6F39219FDC39500536DB8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99F6F39119FDC39500536DB8 /* Images.xcassets */; };
+		BE2EEE321E5D681600A8C742 /* smallerbbIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = BE2EEE311E5D681600A8C742 /* smallerbbIcon.png */; };
+		BE6FF6EE1E5FD13C006AD9B5 /* smallerprofileIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = BE6FF6ED1E5FD13C006AD9B5 /* smallerprofileIcon.png */; };
 		BED098D81E4BA0C30093E91B /* WarriorWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED098D71E4BA0C30093E91B /* WarriorWallet.swift */; };
+		BEEF58601E57800000EAE76F /* ProfileTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF585F1E57800000EAE76F /* ProfileTabBar.swift */; };
 		C105A2A018B6A992007C841C /* bigAlphaCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = C105A29F18B6A992007C841C /* bigAlphaCircle.png */; };
 		C10BC49A18AD8C5D004C91CD /* newAlphaCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = C10BC49918AD8C5D004C91CD /* newAlphaCircle.png */; };
 		C11195211A113F35001ED805 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11195201A113F35001ED805 /* SystemConfiguration.framework */; };
@@ -244,7 +247,10 @@
 		99DE4C2019E5B58D00EBA303 /* EventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailViewController.m; sourceTree = "<group>"; };
 		99F6C3DA1A441A920041328A /* date_to-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "date_to-32.png"; sourceTree = "<group>"; };
 		99F6F39119FDC39500536DB8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BE2EEE311E5D681600A8C742 /* smallerbbIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smallerbbIcon.png; sourceTree = "<group>"; };
+		BE6FF6ED1E5FD13C006AD9B5 /* smallerprofileIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smallerprofileIcon.png; sourceTree = "<group>"; };
 		BED098D71E4BA0C30093E91B /* WarriorWallet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarriorWallet.swift; sourceTree = "<group>"; };
+		BEEF585F1E57800000EAE76F /* ProfileTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTabBar.swift; sourceTree = "<group>"; };
 		C105A29F18B6A992007C841C /* bigAlphaCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bigAlphaCircle.png; sourceTree = "<group>"; };
 		C108EA171A0802B2006A7BC7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C10BC49918AD8C5D004C91CD /* newAlphaCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newAlphaCircle.png; sourceTree = "<group>"; };
@@ -454,12 +460,14 @@
 				99DE4C1F19E5B58D00EBA303 /* EventDetailViewController.h */,
 				99DE4C2019E5B58D00EBA303 /* EventDetailViewController.m */,
 				C108EA171A0802B2006A7BC7 /* Main.storyboard */,
+				BE6FF6ED1E5FD13C006AD9B5 /* smallerprofileIcon.png */,
 				440340101CC5DD20005DCBEE /* WebViewContoller.swift */,
 				403DDE7D1CBC1C65009F2950 /* insta_icon_32x32.png */,
 				403DDE7F1CBC1CDA009F2950 /* facebook_icon.png_32x32.png */,
 				403DDE801CBC1CDA009F2950 /* twitter_icon.png_32x32.png */,
 				403DDE731CB9DF72009F2950 /* down_arrow 2.png_16x16.png */,
 				44EAFBD21CA31AD800BE6200 /* ProfileViewController.swift */,
+				BEEF585F1E57800000EAE76F /* ProfileTabBar.swift */,
 				44A8E2BD1CA1E11600C4435D /* BlackBoardProfileViewController.h */,
 				44A8E2BE1CA1E11600C4435D /* BlackBoardProfileViewController.m */,
 				44DF21571C99DD36003A0C3A /* MapViewController.swift */,
@@ -501,6 +509,7 @@
 				C11195241A114473001ED805 /* Reachability.m */,
 				07484B1B1C84CF84007D1ADC /* Authentication.swift */,
 				BED098D71E4BA0C30093E91B /* WarriorWallet.swift */,
+				BE2EEE311E5D681600A8C742 /* smallerbbIcon.png */,
 				99F6F39119FDC39500536DB8 /* Images.xcassets */,
 				C1E66DF8183C333A00851B89 /* Supporting Files */,
 			);
@@ -619,6 +628,7 @@
 				C1DEC8D018F4AC2700ECD591 /* dotCampusRec.png in Resources */,
 				401843EA1CCE9424002D1B07 /* warrior-one-card-icon.png in Resources */,
 				4071E6561C925655002E0D8E /* TwitterKitResources.bundle in Resources */,
+				BE2EEE321E5D681600A8C742 /* smallerbbIcon.png in Resources */,
 				99A580931A0048E70044CA5E /* Default-Portrait-736h@3x.png in Resources */,
 				99F6F39219FDC39500536DB8 /* Images.xcassets in Resources */,
 				992592B219FDC46B008946F8 /* Icon-76.png in Resources */,
@@ -643,6 +653,7 @@
 				C1DEC8CD18F4AC2700ECD591 /* dotAthletics.png in Resources */,
 				403DDE811CBC1CDA009F2950 /* facebook_icon.png_32x32.png in Resources */,
 				99A5808E1A0048E70044CA5E /* Default-568h@2x.png in Resources */,
+				BE6FF6EE1E5FD13C006AD9B5 /* smallerprofileIcon.png in Resources */,
 				992592BE19FDC46B008946F8 /* iTunesArtwork@2x.png in Resources */,
 				C1DEC8CB18F4AC2700ECD591 /* dotAcademics.png in Resources */,
 				402F77801CC80145001E8153 /* map-icon.png in Resources */,
@@ -731,6 +742,7 @@
 				170C727D1CC6C2FD00EC4F0C /* JsonParser.m in Sources */,
 				403DDE7C1CB9EA70009F2950 /* ExpandableEventCell.m in Sources */,
 				C11195251A114473001ED805 /* Reachability.m in Sources */,
+				BEEF58601E57800000EAE76F /* ProfileTabBar.swift in Sources */,
 				BED098D81E4BA0C30093E91B /* WarriorWallet.swift in Sources */,
 				07CC95661C877BC900C05BB0 /* ScriptWebView.swift in Sources */,
 				CC3433841E5E1AF30016ADDD /* keychain.swift in Sources */,

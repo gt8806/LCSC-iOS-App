@@ -9,19 +9,12 @@
 import UIKit
 
 class ProfileViewController: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate, ImageCropViewControllerDelegate {
-    @IBOutlet weak var menuButton: UIBarButtonItem!
     
     @IBOutlet weak var imageView: UIImageView!
     var imagePicker: UIImagePickerController!
     let auth = Authentication()
     
-    
-    
-    @IBAction func cameraButtonTapped(_ sender: UIBarButtonItem) {
-        initImageCropping()
-    }
-    
-    
+	
     @IBAction func takeAPictureTapped(_ sender: UIButton) {
         initImageCropping()
     }
@@ -86,10 +79,12 @@ class ProfileViewController: UIViewController,UINavigationControllerDelegate, UI
             }
         }
     }
-    func bttnTouched(_ sender: UIBarButtonItem){
-        self.performSegue(withIdentifier: "profileBackToMenu", sender: nil)
-    }
-    
+	
+	
+
+	@IBOutlet weak var webView: UIWebView!
+	var urlValue = "http://connect.lcsc.edu/ecc/warrioronecard.aspx"
+	
     override func viewDidLoad() {
         super.viewDidLoad()
         let titleImage = UIImage(named: "Wordmark-Blue-Red-1")
@@ -98,9 +93,7 @@ class ProfileViewController: UIViewController,UINavigationControllerDelegate, UI
         go.addTarget(self, action: #selector(WebViewContoller.bttnTouched(_:)), for: UIControlEvents.touchUpInside)
         
         self.navigationItem.titleView = go
-        //my code :)
-        menuButton.target = revealViewController()
-        menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
+		
         
         imageView.layer.cornerRadius = 5
         imageView.clipsToBounds = true
@@ -111,5 +104,11 @@ class ProfileViewController: UIViewController,UINavigationControllerDelegate, UI
         
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
         checkAndLoadCardPicture()
+		
+		
+		if let url = URL (string: urlValue){
+			let requestObj = URLRequest(url: url)
+			_ = webView.loadRequest(requestObj)
+		}
     }
 }
