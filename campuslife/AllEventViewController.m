@@ -28,11 +28,49 @@
 
 @implementation DaySection
 
+-(NSString *)day:(NSInteger)day month:(NSInteger)month year:(NSInteger)year{
+	NSDateComponents* comps = [[NSDateComponents alloc]init];
+	comps.year = year;
+	comps.month = month;
+	comps.day = day;
+	NSCalendar* calendar = [NSCalendar currentCalendar];
+	NSDate* date = [calendar dateFromComponents:comps];
+	NSDateFormatter *myFormatter = [[NSDateFormatter alloc] init];
+	[myFormatter setDateFormat:@"EEEE"];
+	[myFormatter setDateFormat:@"c"];
+	NSString *dayOfWeek = [myFormatter stringFromDate:date];
+	return dayOfWeek;
+}
 
 -(id)initWithDay:(NSInteger)day month:(NSInteger)month year:(NSInteger)year events:(NSArray *)events
 {
+	// this gives a number sunday=1
+	NSString* dayOfWeekasint = [self day:day month:month year:year];
+	NSInteger value = [dayOfWeekasint intValue];
+	NSString * dayOfWeek;
+	if (value == 1){
+		dayOfWeek = @"Sunday";
+	}
+	else if (value == 2){
+		dayOfWeek = @"Monday";
+	}
+	else if (value == 3){
+		dayOfWeek = @"Tuesday";
+	}
+	else if (value == 4){
+		dayOfWeek = @"Wednesday";
+	}
+	else if (value == 5){
+		dayOfWeek = @"Thursday";
+	}
+	else if (value == 6){
+		dayOfWeek = @"Friday";
+	}
+	else if (value == 7){
+		dayOfWeek = @"Saturday";
+	}
     _eventsInDay = [[NSArray alloc] initWithArray:events];
-    _sectionHeader = [NSString stringWithFormat:@"%@ %ld, %ld", [CalendarInfo getMonthBarDateOfMonth:month], day, year];
+    _sectionHeader = [NSString stringWithFormat:@"%@ %@ %ld, %ld", dayOfWeek, [CalendarInfo getMonthBarDateOfMonth:month], day, year];
     return self;
     
 }
