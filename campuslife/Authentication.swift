@@ -18,7 +18,7 @@ import UIKit
 	override init(){
         super.init()
         //initializing data in case it is nil
-        if (((prefs.string(forKey: "wwlogin") == nil || keychain.get("wwpassword") == nil || prefs.string(forKey: "bblogin") == nil || keychain.get("bbpassword") == nil)) || (prefs.string(forKey: "lcmlogin") == nil) || (keychain.get("lcmpassword")) == nil){
+		if (((prefs.string(forKey: "walletlogin") == nil || keychain.get("walletpassword") == nil || prefs.string(forKey: "wwlogin") == nil || keychain.get("wwpassword") == nil || prefs.string(forKey: "bblogin") == nil || keychain.get("bbpassword") == nil)) || (prefs.string(forKey: "lcmlogin") == nil) || (keychain.get("lcmpassword")) == nil) {
             clearProfile()
         }
         if (prefs.string(forKey: "userHaveEverBeenAtResourcesPage") == nil){
@@ -33,6 +33,7 @@ import UIKit
     func clearProfile(){
         clearWarriorWebProfile()
         clearBlackBoardProfile()
+		clearWarriorWalletProfile()
         clearLCMailProfile()
     }
     
@@ -47,14 +48,20 @@ import UIKit
 		keychain.set("", forKey: "bbpassword")
         prefs.synchronize()
     }
-    
+	
+	func clearWarriorWalletProfile(){
+		prefs.set("", forKey: "walletlogin")
+		keychain.set("", forKey: "walletpassword")
+		prefs.synchronize()
+	}
+	
     func clearLCMailProfile(){
         prefs.set("", forKey: "lcmlogin")
 		keychain.set("", forKey: "lcmpassword")
         prefs.synchronize()
     }
     
-    //function to avoid showingt he alert in resources table more than once
+    //function to avoid showing the alert in resources table more than once
     func userHaveEverBeenAtResourcesPage() -> Bool{
         let bool = prefs.bool(forKey: "userHaveEverBeenAtResourcesPage")
         return bool
@@ -96,11 +103,20 @@ import UIKit
                     return true
                 }
             }
-        }
-        return false
+        }else if destination == "warriorWallet"{
+			if (newLogin != ""){
+				if (newPassword != ""){
+					prefs.set(newLogin!, forKey: "walletlogin")
+					keychain.set(newPassword!, forKey: "walletpassword")
+					prefs.synchronize()
+					return true
+				}
+			}
+		}
+		return false
     }
-    
-    
+	
+	
     //gets
     func getWarriorWebUsername() -> String{
         return prefs.string(forKey: "wwlogin")!
@@ -117,6 +133,14 @@ import UIKit
     func getBlackBoardPassword() -> String{
         return keychain.get("bbpassword")!
     }
-    
+	
+	func getWarriorWalletUsername() -> String{
+		return prefs.string(forKey: "walletlogin")!
+	}
+	
+	func getWarriorWalletPassword() -> String{
+		return keychain.get("walletpassword")!
+	}
+	
 }
 

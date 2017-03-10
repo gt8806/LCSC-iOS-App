@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WarriorWebProfileViewController : UIViewController
+@interface WarriorWebProfileViewController : UIViewController <UITextFieldDelegate>
 //<UITableViewDataSource, UITableViewDelegate>
 //@property (weak, nonatomic) IBOutlet UIBarButtonItem *menuButton;
 

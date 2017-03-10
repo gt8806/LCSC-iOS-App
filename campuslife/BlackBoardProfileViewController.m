@@ -10,6 +10,7 @@
 #import "LCSC-Swift.h"
 //#import "SWRevealViewController.h"
 
+
 @implementation BlackBoardProfileViewController
 
 - (void)changeDisplaytext:(NSString*)newLogin andPassword:(NSString*)newPassword{
@@ -26,6 +27,7 @@
 //fill the text file with the user information after loading the view
 - (void)viewDidLoad {
     [super viewDidLoad];
+	self.passwordDisplay.delegate = self;
     UIImage* titleImage = [UIImage imageNamed:@"Wordmark-Blue-Red-1"];
     CGRect frameimg = CGRectMake(0,0,150,25);
     UIButton *Bttn = [[UIButton alloc] initWithFrame:frameimg];
@@ -71,6 +73,13 @@
 		[_usernameDisplay endEditing:YES];
 		[_passwordDisplay endEditing:YES];
 }
+
+-(BOOL)textFieldShouldReturn:(UITextField *)passwordDisplay
+{
+	[self signingTapped:self];
+	return YES;
+}
+
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if (![_auth setProfile:@"blackboard" newLogin:_usernameDisplay.text newPassword:_passwordDisplay.text]){

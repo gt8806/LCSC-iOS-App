@@ -28,6 +28,7 @@
 //fill the text file with the user information after loading the view
 - (void)viewDidLoad {
     [super viewDidLoad];
+	self.passwordDisplay.delegate = self;
     UIImage* titleImage = [UIImage imageNamed:@"Wordmark-Blue-Red-1"];
     CGRect frameimg = CGRectMake(0,0,150,25);
     UIButton *Bttn = [[UIButton alloc] initWithFrame:frameimg];
@@ -91,6 +92,13 @@
         [self changeDisplaytext:newLogin andPassword:newPassword];
     }
 }
+
+-(BOOL)textFieldShouldReturn:(UITextField *)passwordDisplay
+{
+	[self signingTapped:self];
+	return YES;
+}
+
 
 
 - (void)didReceiveMemoryWarning {
