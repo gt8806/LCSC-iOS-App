@@ -97,8 +97,8 @@ class ProfileViewController: UIViewController,UINavigationControllerDelegate, UI
         
         imageView.layer.cornerRadius = 5
         imageView.clipsToBounds = true
-        imageView.layer.borderColor = UIColor.black.cgColor
-        imageView.layer.borderWidth = 2.0
+		//imageView.layer.borderColor = UIColor.black.cgColor
+		//imageView.layer.borderWidth = 2.0
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "backgroundCollor")!)
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
