@@ -102,6 +102,8 @@
 		99DE4C2119E5B58D00EBA303 /* EventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DE4C2019E5B58D00EBA303 /* EventDetailViewController.m */; };
 		99F6C3DB1A441A920041328A /* date_to-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 99F6C3DA1A441A920041328A /* date_to-32.png */; };
 		99F6F39219FDC39500536DB8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99F6F39119FDC39500536DB8 /* Images.xcassets */; };
+		ADCEAF0E1E78D51900744745 /* QRcodeMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = ADCEAF0D1E78D51900744745 /* QRcodeMenu.png */; };
+		ADCEAF101E78D95600744745 /* QRScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCEAF0F1E78D95600744745 /* QRScannerController.swift */; };
 		BE2EEE321E5D681600A8C742 /* smallerbbIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = BE2EEE311E5D681600A8C742 /* smallerbbIcon.png */; };
 		BE6D8F011E64B77F00AC2310 /* WarriorWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6D8F001E64B77F00AC2310 /* WarriorWalletViewController.swift */; };
 		BE6D8F061E64BD9000AC2310 /* WalletProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6D8F051E64BD9000AC2310 /* WalletProfileViewController.m */; };
@@ -248,6 +250,8 @@
 		99DE4C2019E5B58D00EBA303 /* EventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailViewController.m; sourceTree = "<group>"; };
 		99F6C3DA1A441A920041328A /* date_to-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "date_to-32.png"; sourceTree = "<group>"; };
 		99F6F39119FDC39500536DB8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		ADCEAF0D1E78D51900744745 /* QRcodeMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = QRcodeMenu.png; path = campuslife/QRcodeMenu.png; sourceTree = SOURCE_ROOT; };
+		ADCEAF0F1E78D95600744745 /* QRScannerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerController.swift; sourceTree = "<group>"; };
 		BE2EEE311E5D681600A8C742 /* smallerbbIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smallerbbIcon.png; sourceTree = "<group>"; };
 		BE6D8F001E64B77F00AC2310 /* WarriorWalletViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarriorWalletViewController.swift; sourceTree = "<group>"; };
 		BE6D8F041E64BD9000AC2310 /* WalletProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WalletProfileViewController.h; path = ../WalletProfileViewController.h; sourceTree = "<group>"; };
@@ -310,6 +314,7 @@
 		402F77751CC80145001E8153 /* menu-icons */ = {
 			isa = PBXGroup;
 			children = (
+				ADCEAF0D1E78D51900744745 /* QRcodeMenu.png */,
 				4C7FF3DB1E426B2B007B5E34 /* wallet-icon.png */,
 				449269A11CD7CF7F00DDEADA /* add-to-calendar-icon.png */,
 				449269A31CD7CFB200DDEADA /* lcmail-icon.png */,
@@ -515,6 +520,7 @@
 				07484B1B1C84CF84007D1ADC /* Authentication.swift */,
 				BE6D8F001E64B77F00AC2310 /* WarriorWalletViewController.swift */,
 				BE2EEE311E5D681600A8C742 /* smallerbbIcon.png */,
+				ADCEAF0F1E78D95600744745 /* QRScannerController.swift */,
 				99F6F39119FDC39500536DB8 /* Images.xcassets */,
 				C1E66DF8183C333A00851B89 /* Supporting Files */,
 			);
@@ -670,6 +676,7 @@
 				99A5808F1A0048E70044CA5E /* Default-667h@2x.png in Resources */,
 				997451A41A38D93F00EA9B7C /* ipadDetails.jpg in Resources */,
 				99A1B2391A2E7FD800F6B42A /* forward-32.png in Resources */,
+				ADCEAF0E1E78D51900744745 /* QRcodeMenu.png in Resources */,
 				997268B81A37B224000FB68A /* iphoneE.jpg in Resources */,
 				402F77891CC8063C001E8153 /* lcsc-athletics-icon.png in Resources */,
 				99A580921A0048E70044CA5E /* Default-Landscape@2x.png in Resources */,
@@ -726,6 +733,7 @@
 				4071E64E1C925144002E0D8E /* twitterViewController.m in Sources */,
 				C1E66E02183C333A00851B89 /* AppDelegate.m in Sources */,
 				440340111CC5DD20005DCBEE /* WebViewContoller.swift in Sources */,
+				ADCEAF101E78D95600744745 /* QRScannerController.swift in Sources */,
 				9995B91C1A2BD67D004C08C9 /* LCSCWebViewController.m in Sources */,
 				44EAFBD31CA31AD800BE6200 /* ProfileViewController.swift in Sources */,
 				991048FB1A1E656100C83570 /* ContactInfo.m in Sources */,
