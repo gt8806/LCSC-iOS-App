@@ -37,7 +37,12 @@ class WarriorWalletViewController: UIViewController, UIWebViewDelegate {
 			_ = walletWebView.loadRequest(requestObj)
 		}
 		
-
+		let titleImage = UIImage(named: "Wordmark-Blue-Red-1")
+		let go: UIButton = UIButton(frame: CGRect(x: 0,y: 0,width: 150, height: 25))
+		go.setImage(titleImage, for: UIControlState())
+		go.addTarget(self, action: #selector(WebViewContoller.bttnTouched(_:)), for: UIControlEvents.touchUpInside)
+		
+		self.navigationItem.titleView = go
 		
 		if self.revealViewController() != nil {
 			menuButton.target = self.revealViewController()

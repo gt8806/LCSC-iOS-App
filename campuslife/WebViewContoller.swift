@@ -58,7 +58,6 @@ class WebViewContoller: UIViewController, UIWebViewDelegate {
             case "LCMail": openAppDeepLink("googlegmail://")
             case "BlackBoard": urlText = "https://lcsc.blackboard.com/"
             case "Twitter": urlText = "http://twitter.com/LCSC"
-            case "Radio": urlText = "http://stream.lcsc.edu/iphone.htm"
             case "LiveStream": urlText = "http://livestream.com/accounts/8399277"
             case "Facebook": urlText = "https://www.facebook.com/LewisClarkState"
             case "Instagram": urlText = "https://www.instagram.com/lewisclarkstate/?hl=en"
@@ -68,10 +67,9 @@ class WebViewContoller: UIViewController, UIWebViewDelegate {
         }
         
         
-        //fix issue with LCSC's radio page that loads the page too small
-        if title != "Radio"{
-            webViewWindow.scalesPageToFit = true
-        }
+	
+		webViewWindow.scalesPageToFit = true
+
         
         
         //opens URL in webview
