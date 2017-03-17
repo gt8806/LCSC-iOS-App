@@ -94,8 +94,8 @@ class WarriorOneCardViewController: UIViewController,UINavigationControllerDeleg
 		let go: UIButton = UIButton(frame: CGRect(x: 0,y: 0, width: 150, height: 25))
 		go.setImage(titleImage, for: UIControlState())
 		go.addTarget(self, action: #selector(WebViewContoller.bttnTouched(_:)), for: UIControlEvents.touchUpInside)
-		//go.
-		//adjustsImageSizeToFitWidth = true
+		go.imageView?.contentMode = UIViewContentMode.scaleAspectFit;
+		
 		self.navigationItem.titleView = go
 	
 		
@@ -114,7 +114,6 @@ class WarriorOneCardViewController: UIViewController,UINavigationControllerDeleg
 		}
 		
 		
-	
 	}
 
 

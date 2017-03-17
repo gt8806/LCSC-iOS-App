@@ -28,12 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	self.passwordDisplay.delegate = self;
-    UIImage* titleImage = [UIImage imageNamed:@"Wordmark-Blue-Red-1"];
-    CGRect frameimg = CGRectMake(0,0,150,25);
-    UIButton *Bttn = [[UIButton alloc] initWithFrame:frameimg];
-    [Bttn setImage:titleImage forState:UIControlStateNormal];
-    [Bttn addTarget:self action:@selector(bttTouched) forControlEvents:UIControlEventTouchUpInside];
-    self.navigationItem.titleView = Bttn;
+	
     //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "backgroundCollor")!)
     UIImage *img = [[UIImage alloc] init];
     img = [UIImage imageNamed:@"backgroundCollor"];

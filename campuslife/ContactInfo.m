@@ -28,6 +28,7 @@
     UIButton *Bttn = [[UIButton alloc] initWithFrame:frameimg];
     [Bttn setImage:titleImage forState:UIControlStateNormal];
     [Bttn addTarget:self action:@selector(bttTouched) forControlEvents:UIControlEventTouchUpInside];
+	Bttn.imageView.contentMode = UIViewContentModeScaleAspectFit;
     self.navigationItem.titleView = Bttn;
     self.view.backgroundColor = [UIColor whiteColor];
     _menuButton.target = [self revealViewController];
