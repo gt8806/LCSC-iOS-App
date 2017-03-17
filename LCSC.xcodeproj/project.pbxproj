@@ -105,7 +105,6 @@
 		ADCEAF0E1E78D51900744745 /* QRcodeMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = ADCEAF0D1E78D51900744745 /* QRcodeMenu.png */; };
 		ADCEAF101E78D95600744745 /* QRScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCEAF0F1E78D95600744745 /* QRScannerController.swift */; };
 		BE4E9E3A1E7917B4000C9EC9 /* WarriorOneCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4E9E391E7917B4000C9EC9 /* WarriorOneCardViewController.swift */; };
-		BE6D8F011E64B77F00AC2310 /* WarriorWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6D8F001E64B77F00AC2310 /* WarriorWalletViewController.swift */; };
 		BE6D8F061E64BD9000AC2310 /* WalletProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6D8F051E64BD9000AC2310 /* WalletProfileViewController.m */; };
 		BE6FF6EE1E5FD13C006AD9B5 /* smallerprofileIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = BE6FF6ED1E5FD13C006AD9B5 /* smallerprofileIcon.png */; };
 		BED60A1E1E7B7CBA00E8D31F /* blackboard.png in Resources */ = {isa = PBXBuildFile; fileRef = BED60A1D1E7B7CBA00E8D31F /* blackboard.png */; };
@@ -254,7 +253,6 @@
 		ADCEAF0D1E78D51900744745 /* QRcodeMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = QRcodeMenu.png; path = campuslife/QRcodeMenu.png; sourceTree = SOURCE_ROOT; };
 		ADCEAF0F1E78D95600744745 /* QRScannerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerController.swift; sourceTree = "<group>"; };
 		BE4E9E391E7917B4000C9EC9 /* WarriorOneCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WarriorOneCardViewController.swift; path = ../WarriorOneCardViewController.swift; sourceTree = "<group>"; };
-		BE6D8F001E64B77F00AC2310 /* WarriorWalletViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarriorWalletViewController.swift; sourceTree = "<group>"; };
 		BE6D8F041E64BD9000AC2310 /* WalletProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WalletProfileViewController.h; path = ../WalletProfileViewController.h; sourceTree = "<group>"; };
 		BE6D8F051E64BD9000AC2310 /* WalletProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WalletProfileViewController.m; path = ../WalletProfileViewController.m; sourceTree = "<group>"; };
 		BE6FF6ED1E5FD13C006AD9B5 /* smallerprofileIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smallerprofileIcon.png; sourceTree = "<group>"; };
@@ -521,7 +519,6 @@
 				C111951F1A113EFA001ED805 /* Reachability.h */,
 				C11195241A114473001ED805 /* Reachability.m */,
 				07484B1B1C84CF84007D1ADC /* Authentication.swift */,
-				BE6D8F001E64B77F00AC2310 /* WarriorWalletViewController.swift */,
 				ADCEAF0F1E78D95600744745 /* QRScannerController.swift */,
 				BED60A1D1E7B7CBA00E8D31F /* blackboard.png */,
 				99F6F39119FDC39500536DB8 /* Images.xcassets */,
@@ -751,7 +748,6 @@
 				171035BB1CC043820019AAA6 /* DataManager.m in Sources */,
 				C1E66E48183C33D000851B89 /* Day_Event_ViewController.m in Sources */,
 				07484B1C1C84CF84007D1ADC /* Authentication.swift in Sources */,
-				BE6D8F011E64B77F00AC2310 /* WarriorWalletViewController.swift in Sources */,
 				BE4E9E3A1E7917B4000C9EC9 /* WarriorOneCardViewController.swift in Sources */,
 				BE6D8F061E64BD9000AC2310 /* WalletProfileViewController.m in Sources */,
 				170C727A1CC4B47500EC4F0C /* DataCache.m in Sources */,

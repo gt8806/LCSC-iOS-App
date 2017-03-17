@@ -66,8 +66,21 @@ class WebViewContoller: UIViewController, UIWebViewDelegate {
 			case "WarriorWallet": urlText = "http://isoptera.lcsc.edu:5199"
             default: return
         }
-        
-        
+		
+		
+		/**func promptAlet(_ title: String, message: String){
+			let alert:UIAlertView = UIAlertView()
+			alert.title = title
+			alert.message = message
+			alert.delegate = self
+			alert.addButton(withTitle: "Ok")
+			alert.show()
+		}
+		
+		if title == "WarriorWallet"{
+			promptAlet("Please login or else you won't", message: "Your card picture was saved.")
+		}**/
+		
 	
 		webViewWindow.scalesPageToFit = true
 
