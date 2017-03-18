@@ -16,6 +16,8 @@ class WebViewContoller: UIViewController, UIWebViewDelegate {
     
     @IBOutlet weak var webViewWindow: UIWebView!
 
+	@IBOutlet weak var QRButton: UIBarButtonItem!
+	
     //Load the main Apps's main page when this button is touched
     func bttnTouched(_ sender: UIBarButtonItem){
         self.performSegue(withIdentifier: "backToMenu", sender: nil)
@@ -31,6 +33,8 @@ class WebViewContoller: UIViewController, UIWebViewDelegate {
             UIApplication.shared.openURL(URL(string: "https://itunes.apple.com/us/app/gmail-email-from-google/id422689480?mt=8")!)
         }
     }
+	
+	
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,28 +67,33 @@ class WebViewContoller: UIViewController, UIWebViewDelegate {
             case "Instagram": urlText = "https://www.instagram.com/lewisclarkstate/?hl=en"
             case "WarriorOne Card": urlText = "http://connect.lcsc.edu/ecc/warrioronecard.aspx"
             case "Campus News": urlText = "http://www.lcsc.edu/news"
-			case "WarriorWallet": urlText = "http://isoptera.lcsc.edu:5199"
+			case "WarriorWallet": urlText = "http://isoptera.lcsc.edu/~gus/"
             default: return
         }
 		
-		
-		/**func promptAlet(_ title: String, message: String){
-			let alert:UIAlertView = UIAlertView()
-			alert.title = title
-			alert.message = message
-			alert.delegate = self
-			alert.addButton(withTitle: "Ok")
-			alert.show()
+		if title != "WarriorWallet"{
+			self.navigationItem.rightBarButtonItem = nil
 		}
 		
+		
+		/**func displayLoginAlert() {
+			let alert = UIAlertController(title:"Registration successful", message:"You may now login. Thank You!",preferredStyle: UIAlertControllerStyle.alert)
+			let loginAction = UIAlertAction(title:"Login", style:UIAlertActionStyle.default) { (UIAlertAction) -> Void in
+				self.performSegue(withIdentifier: "alertToProfile", sender:self)
+			}
+			
+			alert.addAction(loginAction)
+			self.present(alert, animated: true, completion: nil)
+		}
+
 		if title == "WarriorWallet"{
-			promptAlet("Please login or else you won't", message: "Your card picture was saved.")
+			displayLoginAlert()
+			
 		}**/
 		
-	
 		webViewWindow.scalesPageToFit = true
-
-        
+		
+		
         
         //opens URL in webview
         webViewWindow?.delegate = self
@@ -103,6 +112,6 @@ class WebViewContoller: UIViewController, UIWebViewDelegate {
         //runs an script according to the url
         let script = ScriptWebView()
         let currentURL = (webView.request?.url!.absoluteString)!
-       webView.stringByEvaluatingJavaScript(from: script.getScript(currentURL))
+        webView.stringByEvaluatingJavaScript(from: script.getScript(currentURL))
     }
 }

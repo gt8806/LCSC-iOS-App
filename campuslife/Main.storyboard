@@ -725,7 +725,7 @@
         <scene sceneID="vbC-Ui-bsr">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pcG-gU-rIb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="All Events" image="4F7BACB1-09FC-4D45-85F8-AE93E255FA67" id="2J2-W4-Dwn"/>
+                    <tabBarItem key="tabBarItem" title="All Events" image="EE74C329-F806-4637-B50E-199728AC3C4A" id="2J2-W4-Dwn"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bgd-Eu-lYD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -744,7 +744,7 @@
         <scene sceneID="oWY-TB-3gO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uar-4W-Ymn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Calendar" image="2E09FDEA-4065-499F-80DC-4CCE3CBB63ED" id="0QB-JS-ySv"/>
+                    <tabBarItem key="tabBarItem" title="Calendar" image="65F67682-A077-4F87-A5BB-3521554BCA21" id="0QB-JS-ySv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nr1-r4-eMJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1294,23 +1294,25 @@
                     </view>
                     <navigationItem key="navigationItem" id="Zgq-OY-GWw">
                         <barButtonItem key="leftBarButtonItem" image="menu.png" id="FZW-QO-5o6"/>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="Xtm-Au-3if">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eAS-TX-FIX">
-                                <rect key="frame" x="339" y="7" width="20" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </button>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem image="QRcodeMenu.png" id="167-e9-wmy">
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                            <barButtonItem id="K81-Jq-VAc"/>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="QRButton" destination="167-e9-wmy" id="m4c-PC-GBb"/>
                         <outlet property="menuButton" destination="FZW-QO-5o6" id="YOC-Tt-P3K"/>
                         <outlet property="webViewWindow" destination="dJ0-4r-YJf" id="HgJ-a5-F7O"/>
                         <segue destination="dLU-F8-34X" kind="presentation" identifier="backToMenu" id="cEJ-Bd-7vd"/>
+                        <segue destination="6LN-i4-Wh9" kind="custom" identifier="alertToProfile" customClass="SWRevealViewControllerSeguePushController" id="TNy-hb-g77"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qoE-Pj-PKL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2790" y="-910"/>
+            <point key="canvasLocation" x="-2178" y="-363"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="nQr-Ra-lW4">
@@ -2197,7 +2199,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="2E09FDEA-4065-499F-80DC-4CCE3CBB63ED" width="32" height="32">
+        <image name="65F67682-A077-4F87-A5BB-3521554BCA21" width="32" height="32">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
@@ -2335,7 +2337,8 @@ NwBFAEsAVABbAGgAbwB3AHkAfgCAAIIAhwCSAJQAlgCYAJ0AoACiAKQApgCoAK0AxADGAMgd2h3fHeod
 AAAAAAAAPgAAAAAAAAAAAAAAAAAAHqc
 </mutableData>
         </image>
-        <image name="4F7BACB1-09FC-4D45-85F8-AE93E255FA67" width="32" height="32">
+        <image name="Default-667h.png" width="375" height="667"/>
+        <image name="EE74C329-F806-4637-B50E-199728AC3C4A" width="32" height="32">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -2454,7 +2457,7 @@ GbcZuxnCGcoZ1xncGd4Z4BnlGe0Z8Bn1Gf0aABoSGhUaGgAAAAAAAAIBAAAAAAAAAEEAAAAAAAAAAAAA
 AAAAABocA
 </mutableData>
         </image>
-        <image name="Default-667h.png" width="375" height="667"/>
+        <image name="QRcodeMenu.png" width="30" height="30"/>
         <image name="RCH_Resized" width="900" height="675"/>
         <image name="add-to-calendar-icon.png" width="32" height="32"/>
         <image name="athletics icon" width="32" height="32"/>
@@ -2488,7 +2491,7 @@ AAAAABocA
         <segue reference="cEJ-Bd-7vd"/>
         <segue reference="37g-o5-7fF"/>
         <segue reference="H0b-D0-ko1"/>
-        <segue reference="VTb-fU-9WP"/>
+        <segue reference="N10-VH-H3Z"/>
         <segue reference="j4T-2R-tpU"/>
     </inferredMetricsTieBreakers>
 </document>
