@@ -15,7 +15,6 @@
 @property (strong, nonatomic) Authentication *auth;
 @property (strong, nonatomic) UIAlertView *alert;
 
-
 @end
 
 @implementation WalletProfileViewController
