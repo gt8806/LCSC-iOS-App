@@ -23,6 +23,7 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
 	@IBOutlet weak var backArrow: UIButton!
 	
 	
+	
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?

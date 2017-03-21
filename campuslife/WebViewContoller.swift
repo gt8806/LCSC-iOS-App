@@ -67,7 +67,7 @@ class WebViewContoller: UIViewController, UIWebViewDelegate {
             case "Instagram": urlText = "https://www.instagram.com/lewisclarkstate/?hl=en"
             case "WarriorOne Card": urlText = "http://connect.lcsc.edu/ecc/warrioronecard.aspx"
             case "Campus News": urlText = "http://www.lcsc.edu/news"
-			case "WarriorWallet": urlText = "http://isoptera.lcsc.edu/~gus/"
+			case "WarriorWallet": urlText = "http://isoptera.lcsc.edu:5199"
             default: return
         }
 		
@@ -76,18 +76,21 @@ class WebViewContoller: UIViewController, UIWebViewDelegate {
 		}
 		
 		
-		/**func displayLoginAlert() {
+		
+		func displayLoginAlert() {
 			let alert = UIAlertController(title:"Registration successful", message:"You may now login. Thank You!",preferredStyle: UIAlertControllerStyle.alert)
 			let loginAction = UIAlertAction(title:"Login", style:UIAlertActionStyle.default) { (UIAlertAction) -> Void in
-				self.performSegue(withIdentifier: "alertToProfile", sender:self)
+				self.performSegue(withIdentifier: "walletToProfile", sender:self)
+
 			}
 			
 			alert.addAction(loginAction)
 			self.present(alert, animated: true, completion: nil)
 		}
 
-		if title == "WarriorWallet"{
-			displayLoginAlert()
+		/**if title == "WarriorWallet"{
+		
+				displayLoginAlert()
 			
 		}**/
 		
