@@ -12,7 +12,7 @@ class ScriptWebView: Authentication{
     
     fileprivate let warriorURL: String = "https://warriorwebss.lcsc.edu/Student/Account/Login?ReturnUrl=%2fStudent%2fPlanning%2fDegreePlans"
     fileprivate let blackboardURL: String = "https://lcsc.blackboard.com/"
-	fileprivate let warriorWalletURL: String = "http://isoptera.lcsc.edu:5199"
+	fileprivate let warriorWalletURL: String = "http://isoptera.lcsc.edu/~gus/"
     
     override init() {
         super.init()
@@ -36,7 +36,7 @@ class ScriptWebView: Authentication{
 			let savedUsername = super.getWarriorWalletUsername()
 			let savedPassword = super.getWarriorWalletPassword()
 			if (savedPassword != "" && savedUsername != ""){
-				return "var pwd=\"\(savedPassword)\"; var usr=\"\(savedUsername)\"; document.getElementById(\"UserName\").value = usr; document.getElementById(\"Password\").value = pwd;document.getElementsByClassName(\"login-partial-input form\")[0].click()"
+				return "var pwd=\"\(savedPassword)\"; var usr=\"\(savedUsername)\"; document.getElementById(\"username\").value = usr; document.getElementById(\"password\").value = pwd;document.getElementById(\"submit\").click();"
 			}
 		}
 		

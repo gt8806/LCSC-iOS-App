@@ -67,7 +67,8 @@ class WebViewContoller: UIViewController, UIWebViewDelegate {
             case "Instagram": urlText = "https://www.instagram.com/lewisclarkstate/?hl=en"
             case "WarriorOne Card": urlText = "http://connect.lcsc.edu/ecc/warrioronecard.aspx"
             case "Campus News": urlText = "http://www.lcsc.edu/news"
-			case "WarriorWallet": urlText = "http://isoptera.lcsc.edu:5199"
+			case "WarriorWallet": urlText = "http://isoptera.lcsc.edu/~gus"
+			//5199
             default: return
         }
 		
@@ -115,6 +116,7 @@ class WebViewContoller: UIViewController, UIWebViewDelegate {
         //runs an script according to the url
         let script = ScriptWebView()
         let currentURL = (webView.request?.url!.absoluteString)!
+		print(currentURL)
         webView.stringByEvaluatingJavaScript(from: script.getScript(currentURL))
     }
 }
