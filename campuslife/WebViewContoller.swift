@@ -11,8 +11,11 @@ import UIKit
 
 //This class is responsible for the webView used to some of the itens in the menu
 class WebViewContoller: UIViewController, UIWebViewDelegate {
-   
-    @IBOutlet weak var menuButton: UIBarButtonItem!
+	
+	fileprivate var prefs = UserDefaults.standard
+	fileprivate let keychain = KeychainSwift()
+	
+	@IBOutlet weak var menuButton: UIBarButtonItem!
     
     @IBOutlet weak var webViewWindow: UIWebView!
 
@@ -89,11 +92,11 @@ class WebViewContoller: UIViewController, UIWebViewDelegate {
 			self.present(alert, animated: true, completion: nil)
 		}
 
-		/**if title == "WarriorWallet"{
-		
-				displayLoginAlert()
-			
-		}**/
+		if title == "WarriorWallet"{
+			if prefs.string(forKey: "walletlogin") == nil || keychain.get("walletpassword") == nil {
+					displayLoginAlert()
+			}
+		}
 		
 		webViewWindow.scalesPageToFit = true
 		
