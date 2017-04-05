@@ -70,12 +70,12 @@ class WebViewContoller: UIViewController, UIWebViewDelegate {
             case "Instagram": urlText = "https://www.instagram.com/lewisclarkstate/?hl=en"
             case "WarriorOne Card": urlText = "http://connect.lcsc.edu/ecc/warrioronecard.aspx"
             case "Campus News": urlText = "http://www.lcsc.edu/news"
-			case "WarriorWallet": urlText = "http://isoptera.lcsc.edu/~gus"
-			//5199
+			case "WarriorWallet": urlText = "https://isoptera.lcsc.edu:5196"
+			//5196
             default: return
         }
 		
-		if title != "WarriorWallet"{
+		if title != ""{
 			self.navigationItem.rightBarButtonItem = nil
 		}
 		
@@ -93,8 +93,12 @@ class WebViewContoller: UIViewController, UIWebViewDelegate {
 		}
 
 		if title == "WarriorWallet"{
-			if prefs.string(forKey: "walletlogin") == nil || keychain.get("walletpassword") == nil {
-					displayLoginAlert()
+			print(prefs.string(forKey: "walletlogin")!)
+			print(keychain.get("walletpassword")!)
+			if (prefs.string(forKey: "walletlogin") == nil) ||
+				(keychain.get("walletpassword") == nil) {
+				print("hello")
+				displayLoginAlert()
 			}
 		}
 		

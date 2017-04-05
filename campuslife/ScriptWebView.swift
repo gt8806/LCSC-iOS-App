@@ -12,7 +12,7 @@ class ScriptWebView: Authentication{
     
     fileprivate let warriorURL: String = "https://warriorwebss.lcsc.edu/Student/Account/Login?ReturnUrl=%2fStudent%2fPlanning%2fDegreePlans"
     fileprivate let blackboardURL: String = "https://lcsc.blackboard.com/"
-	fileprivate let warriorWalletURL: String = "http://isoptera.lcsc.edu/~gus/"
+	fileprivate let warriorWalletURL: String = "https://isoptera.lcsc.edu:5196"
     
     override init() {
         super.init()
