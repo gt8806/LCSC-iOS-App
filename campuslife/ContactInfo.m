@@ -100,7 +100,7 @@
         numberLabel.text = @"208-792-2815";
     }else if (indexPath.row == 2){
         titleLabel.text = @"Campus Security Office";
-        numberLabel.text = @"208-792-5272";
+        numberLabel.text = @"208-792-2226";
     }else if (indexPath.row == 3){
         titleLabel.text = @"Student Counseling";
         numberLabel.text = @"208-792-2291";
