@@ -39,7 +39,7 @@
     if (IPAD == IDIOM)
     {
         self.tableView.rowHeight = 66;
-        UIImageView *CurrentImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ipadE.jpg"]];
+        UIImageView *CurrentImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"backgroundCollor.png"]];
         CurrentImage.frame = self.view.bounds;
         [[self view] addSubview:CurrentImage];
         [CurrentImage.superview sendSubviewToBack:CurrentImage];
@@ -47,7 +47,7 @@
     else
     {
         self.tableView.rowHeight = 44;
-        UIImageView *CurrentImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"iphoneE.jpg"]];
+        UIImageView *CurrentImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"backgroundCollor.png"]];
         CurrentImage.frame = self.view.bounds;
         [[self view] addSubview:CurrentImage];
         [CurrentImage.superview sendSubviewToBack:CurrentImage];
